@@ -1,7 +1,13 @@
 require 'sinatra' 
 
-  get '/cat' do
-    @random_name = ["ziad", "joe", "kittie"].sample
+  get '/random-cat' do
+    @name = ["ziad", "joe", "kittie"].sample
+    erb(:index)
+  end 
+
+  post '/named-cat' do
+    p params
+    @name = params[:name]
     erb(:index)
   end 
 
@@ -17,4 +23,7 @@ require 'sinatra'
     "SHRRRRR!!!"
   end 
 
+  get '/cat-naming' do 
+    erb(:cat_naming)
+  end 
  
