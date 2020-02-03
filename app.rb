@@ -1,4 +1,8 @@
 require 'sinatra' 
+get '/cat' do 
+
+  erb(:index)
+end 
 
 get '/secret' do 
   "hello Ziad!"
@@ -12,9 +16,5 @@ get '/supersecret' do
   "SHRRRRR!!!"
 end 
 
-get '/cat' do
-  "<div style='border: 10px dashed purple'>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
-end
+
  
