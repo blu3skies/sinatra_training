@@ -8,7 +8,7 @@ require 'sinatra'
   post '/named-cat' do
     p params
     @name = params[:name]
-    erb(:index)
+    erb :index
   end 
 
   get '/secret' do 
@@ -23,7 +23,10 @@ require 'sinatra'
     "SHRRRRR!!!"
   end 
 
-  get '/cat-naming' do 
-    erb(:cat_naming)
+  get '/cat-naming' do
+    p params
+    @name = params[:name]
+    erb :cat_naming
+    
   end 
  
