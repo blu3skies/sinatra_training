@@ -1,7 +1,7 @@
 require 'sinatra' 
 
   get '/random-cat' do
-    @name = ["ziad", "joe", "kittie"].sample
+    @name = ["ziad", "joe", "sophie" "kittie"].sample
     erb(:index)
   end 
 
